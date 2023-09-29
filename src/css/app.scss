@@ -1,0 +1,81 @@
+@import url('./fonts/linear-icons-font/style.css');
+@import url('./router-transitions.scss');
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('src/css/fonts/Montserrat.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('src/css/fonts/Inter.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('src/css/fonts/Poppins.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('src/css/fonts/Quicksand.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('src/css/fonts/Mulish.ttf') format('truetype');
+}
+
+//Custom Fonts
+.text {
+  &-montserrat {
+    font-family: 'Montserrat' !important;
+  }
+  &-inter {
+    font-family: 'Inter';
+  }
+  &-poppins {
+    font-family: 'Poppins';
+  }
+  &-quicksand {
+    font-family: 'Quicksand';
+  }
+  &-mulish {
+    font-family: 'Mulish';
+  }
+}
+
+//Custom ScrollBar
+body {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0, 0.8);
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+}
+
+//Varíavel para referência de posicionamento
+.b {
+  border: 1px solid fuchsia;
+}
+
+/* Change the input to any CSS selector you like */
+/* Estilize os campos de entrada padrão */
+input {
+  background-clip: text !important;
+}
+.q-input {
+  &.isLight {
+    -webkit-text-fill-color: $dark;
+  }
+  &.isDark {
+    -webkit-text-fill-color: $light;
+  }
+}
