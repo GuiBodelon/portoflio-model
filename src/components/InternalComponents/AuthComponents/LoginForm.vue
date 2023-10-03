@@ -98,8 +98,7 @@ async function onSubmitLogin() {
   transition: all 0.3s ease;
 
   &:hover {
-    font-weight: 500;
-    color: $dark
+    text-decoration: underline;
   }
 }
 </style>

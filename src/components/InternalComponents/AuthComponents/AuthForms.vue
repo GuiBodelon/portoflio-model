@@ -1,5 +1,5 @@
 <template>
-  <div class="row items-between full-height container">
+  <div class="row items-between container fit">
     <div class="col-12 row">
       <router-view v-slot="{ Component }">
         <transition name="scale-app" mode="out-in">
@@ -40,11 +40,10 @@ watch(() => route.name, (newRouteName) => {
   .simpleLink {
     color: $primary;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 
     &:hover {
-      font-weight: 500;
-      color: $dark
+      transform: translateX(-3px);
     }
   }
 }

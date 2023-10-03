@@ -8,14 +8,14 @@
       </div>
     </div>
 
-    <div class="row q-mt-lg">
+    <div class="row q-mt-lg q-col-gutter-x-xl">
       <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 text-body1 text-mulish"
         :class="$q.dark.isActive ? 'text-light' : 'text-dark'">
         <p>{{ $t('pages.external.aboutMe.aboutMeText.intro1') }}</p>
         <p>{{ $t('pages.external.aboutMe.aboutMeText.intro2') }}</p>
       </div>
       <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-        <ul class="q-gutter-y-md text-mulish text-body2">
+        <ul class="q-gutter-y-md text-mulish text-body2 q-pa-none">
           <li class="q-gutter-x-sm">
             <span class="text-primary text-weight-bold">{{ $t('pages.external.aboutMe.aboutMeText.age.title') }}</span>
             <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">{{

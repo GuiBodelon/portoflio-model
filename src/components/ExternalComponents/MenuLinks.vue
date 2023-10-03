@@ -5,7 +5,7 @@
     <!-- Seção do item de menu -->
     <q-item-section class="flex column justify-center items-center">
       <!-- Ícone do menu -->
-      <span class="menu-icon q-mb-sm" :class="icon"></span>
+      <span class="menu-icon q-mb-sm gt-xs" :class="icon"></span>
       <!-- Título do menu -->
       <div class="text-subtitle2">{{ title }}</div>
     </q-item-section>
@@ -65,12 +65,22 @@ const route = useRoute();
 
   // Estilo do ícone do menu
   .menu-icon {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
 // Estilo do separador
 .separator {
   background-color: $dark !important;
+}
+
+@media (max-width: $breakpoint-xs-max) {
+  .qItem {
+    height: 20px;
+
+    .text-subtitle2 {
+      font-size: 16px;
+    }
+  }
 }
 </style>

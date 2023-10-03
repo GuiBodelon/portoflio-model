@@ -5,7 +5,7 @@ export default {
     menu: {
       menuLink1: 'Home',
       menuLink2: 'Sobre Mim',
-      menuLink3: 'Currículo',
+      menuLink3: 'Curriculum',
       menuLink4: 'Portfólio',
       menuLink5: 'Contato',
     },

@@ -1,6 +1,6 @@
 <template>
   <q-form @submit="onSubmitRegister" class="col-12 row q-gutter-md">
-    <div class="col-12 q-mb-xl">
+    <div class="col-12 q-mb-xs-md q-mb-xl">
       <div class="text-h2 text-bold">{{ $t('components.internal.auth.register.title') }}</div>
     </div>
     <q-input v-model="fullName" dense :label="$t('components.internal.auth.register.fullName.label')"
@@ -62,7 +62,7 @@
     <div class="col-12 q-mt-md">
       <ButtonAuth :label="$t('components.internal.auth.register.registerLabel')" class="full-width" />
     </div>
-    <div class="col-12 q-mt-md">
+    <div class="col-12 q-mt-md q-mb-xs-lg">
       <q-btn flat :label="$t('components.internal.auth.register.alreadyRegisteredLabel')" to="login" />
     </div>
   </q-form>

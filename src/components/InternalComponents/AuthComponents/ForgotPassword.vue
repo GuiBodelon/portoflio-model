@@ -15,8 +15,8 @@
               <q-icon name="mail" />
             </template>
           </q-input>
-          <div class="row q-gutter-y-lg q-gutter-x-sm">
-            <ButtonAuth :label="$t('components.internal.auth.forgotPassword.submitLabel')" />
+          <div class="flex q-gutter-y-sm">
+            <ButtonAuth :label="$t('components.internal.auth.forgotPassword.submitLabel')" class="q-mr-sm" />
             <q-btn color="secondary" :label="$t('components.internal.auth.forgotPassword.backLabel')" to="login" />
           </div>
         </q-form>
@@ -52,8 +52,9 @@
           </div>
         </div>
       </div>
-      <div class="q-gutter-y-lg q-gutter-x-sm">
-        <ButtonAuth :label="$t('components.internal.auth.forgotPassword.onError.registerLabel')" :to="buttonAuth[2].to" />
+      <div class="flex q-gutter-y-sm">
+        <ButtonAuth :label="$t('components.internal.auth.forgotPassword.onError.registerLabel')" :to="buttonAuth[2].to"
+          class="q-mr-sm" />
         <q-btn color="secondary" :label="$t('components.internal.auth.forgotPassword.onError.restartLabel')"
           @click="resetOperation" />
       </div>
@@ -87,7 +88,7 @@ const buttonAuth: ButtonAuthProps[] = [
 
 const email = ref('');
 const linkEnviado = ref(false);
-const operationError = ref(false);
+const operationError = ref(true);
 
 const rules = (val: string, ruleKey: string) => {
   return (val && val.length > 0) || t(ruleKey);
@@ -117,4 +118,3 @@ const resetOperation = () => {
 };
 </script>
 
-<style lang="scss"></style>

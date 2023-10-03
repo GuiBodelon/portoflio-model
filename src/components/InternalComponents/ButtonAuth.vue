@@ -37,7 +37,7 @@ withDefaults(defineProps<ButtonAuthProps>(), {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md-max) {
   .btnAuth {
     padding: 0 2.6rem;
   }

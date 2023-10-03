@@ -2,7 +2,8 @@
   <q-page>
     <div class="bg-auth flex justify-center items-center" :class="$q.dark.isActive ? 'bgDark' : 'bgLight'">
       <div class="authBox row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 firstHalf text-white flex justify-center items-center">
+        <div
+          class="col-xl-6 col-lg-6 col-md-12 col-sm-6 col-xs-12 firstHalf text-white flex justify-center items-center text-quicksand gt-sm">
           <LoginCarousel class="full-width q-px-xl" />
           <span class="text-weight-medium text-subtitle1 text-center" v-html="$t('sideBar.panel.copyright')"></span>
         </div>
@@ -76,22 +77,25 @@ $border-radius: 60px;
   }
 }
 
-$border-radius: 60px;
-
-
 @media (max-width: $breakpoint-md-max) {
   .bg-auth {
     .authBox {
       height: 100vh;
       width: 100vw;
 
-      .firstHalf {
-        display: none;
-      }
-
       .secondHalf {
         border-radius: 0;
       }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-xs-max) {
+  .bg-auth {
+    max-height: 90vh;
+
+    .authBox {
+      max-height: 100%;
     }
   }
 }

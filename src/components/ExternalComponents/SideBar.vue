@@ -1,52 +1,56 @@
 <template>
-  <div class="row full-height text-">
-    <div class="bg-darker col-2 column justify-between text-mulish">
-      <q-list>
-        <MenuLinks v-for="link in updatedMenuLinks()" :key="link.title" v-bind="link" />
-      </q-list>
-      <div class="q-pa-md flex justify-center">
-
-        <q-btn color="primary" icon="admin_panel_settings" to="/painel-adm/login">
-          <q-tooltip class="bg-white">
-            <div class="text-black text-body2">{{ $t('sideBar.panel.btnLogin') }}</div>
-          </q-tooltip>
-        </q-btn>
-      </div>
-    </div>
-    <!-- Cabeçalho da página -->
-    <div class="col-10 q-pt-xl column justify-between items-center text-center bg-dark text-white">
-      <div class="column justify-center items-center">
-        <!-- Imagem de perfil -->
-        <q-img src="/imgs/guilherme_bodelon.jpeg" class="perfilImg shadow-6" />
-
-        <div class="q-mt-lg">
-          <!-- Título da página -->
-          <div class="text-h4">{{ $t('sideBar.panel.title') }}</div>
-          <!-- Subtítulo da página -->
-          <div class="text-subtitle1">{{ $t('sideBar.panel.subtitle') }}</div>
-          <div class="q-mt-lg">
-            <!-- Botões de redes sociais -->
-            <q-btn icon="fa-brands fa-whatsapp" size="md" padding="sm" flat rounded />
-            <q-btn icon="fa-brands fa-linkedin" size="md" padding="sm" flat rounded />
-            <q-btn icon="fa-brands fa-instagram" size="md" padding="sm" flat rounded />
-            <q-btn icon="fa-solid fa-store" size="md" padding="sm" flat rounded />
-          </div>
-          <div class="q-mt-xl">
-            <!-- Botão para download do CV -->
-            <q-btn flat rounded label="Download CV" no-caps size="lg" class="btnDownloadCV" />
-          </div>
+  <q-scroll-area class="fit">
+    <div class="row" style="height: 100vh;">
+      <div class="bg-darker col-2 gt-xs column justify-between text-mulish">
+        <q-list>
+          <MenuLinks v-for="link in updatedMenuLinks()" :key="link.title" v-bind="link" />
+        </q-list>
+        <div class="q-pa-md flex justify-center">
+          <q-btn color="primary" icon="admin_panel_settings" to="/painel-adm/login">
+            <q-tooltip class="bg-white">
+              <div class="text-black text-body2">{{ $t('sideBar.panel.btnLogin') }}</div>
+            </q-tooltip>
+          </q-btn>
         </div>
       </div>
+      <!-- Cabeçalho da página -->
+      <div class="col-12 col-sm-10 q-pt-xl column justify-between items-center text-center bg-dark text-white">
+        <div class="column justify-center items-center">
+          <!-- Imagem de perfil -->
+          <q-img src="/imgs/guilherme_bodelon.jpeg" class="perfilImg" />
 
-      <div class="full-width q-px-xl column q-mb-lg q-gutter-y-md">
-        <!-- Botão para alternar entre Dark Mode e Light Mode -->
-        <ButtonSwitchLight />
-        <!-- Alterar idioma do i18n-->
-        <LanguageSelector :label-color="$q.dark.isActive ? 'white' : 'black'" />
-        <div class="text-subtitle2 text-light" v-html="$t('sideBar.panel.copyright')"></div>
+          <div class="q-mt-lg">
+            <!-- Título da página -->
+            <div class="text-h4">{{ $t('sideBar.panel.title') }}</div>
+            <!-- Subtítulo da página -->
+            <div class="text-subtitle1">{{ $t('sideBar.panel.subtitle') }}</div>
+            <q-list class="lt-sm">
+              <MenuLinks v-for="link in updatedMenuLinks()" :key="link.title" v-bind="link" />
+            </q-list>
+            <div class="q-mt-lg">
+              <!-- Botões de redes sociais -->
+              <q-btn icon="fa-brands fa-whatsapp" size="md" padding="sm" flat rounded />
+              <q-btn icon="fa-brands fa-linkedin" size="md" padding="sm" flat rounded />
+              <q-btn icon="fa-brands fa-instagram" size="md" padding="sm" flat rounded />
+              <q-btn icon="fa-solid fa-store" size="md" padding="sm" flat rounded />
+            </div>
+            <div class="q-mt-xl">
+              <!-- Botão para download do CV -->
+              <q-btn flat rounded label="Download CV" no-caps size="lg" class="btnDownloadCV" />
+            </div>
+          </div>
+        </div>
+
+        <div class="full-width q-px-xs-lg q-px-md-xl column q-mb-lg q-gutter-y-md q-mt-xs-lg">
+          <!-- Botão para alternar entre Dark Mode e Light Mode -->
+          <ButtonSwitchLight />
+          <!-- Alterar idioma do i18n-->
+          <LanguageSelector dark />
+          <div class="text-caption text-light" v-html="$t('sideBar.panel.copyright')"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </q-scroll-area>
 </template>
 
 <script setup lang="ts">
@@ -118,7 +122,8 @@ watch(locale, () => {
   max-width: calc(400px - 200px);
   background-color: $white;
   border: 3px solid $white;
-  border-radius: 300px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .text-h4 {
@@ -132,6 +137,7 @@ watch(locale, () => {
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 25px 25px -10px rgba(0, 0, 0, .3);
   border-radius: 30px !important;
+  font-size: 15px !important;
 
   &:hover {
     background-color: #fff !important;
