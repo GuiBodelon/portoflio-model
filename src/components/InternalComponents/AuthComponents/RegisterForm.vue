@@ -74,17 +74,13 @@ import { useI18n } from 'vue-i18n';
 import { Notify } from 'quasar';
 import { useRouter } from 'vue-router';
 import { registerUser } from 'src/services/AuthServices/register-service';
-import ButtonAuth, { ButtonAuthProps } from '../ButtonAuth.vue';
+import ButtonAuth from '../ButtonAuth.vue';
 
 const router = useRouter()
 const { t } = useI18n({ useScope: 'global' });
 
 const rules = (val: string, ruleKey: string) => {
   return (val && val.length > 0) || t(ruleKey);
-};
-
-const buttonAuth: ButtonAuthProps = {
-  label: t('components.internal.auth.register.registerLabel'),
 };
 
 const fullName = ref('');

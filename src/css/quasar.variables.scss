@@ -13,10 +13,11 @@
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
 $primary: #5050f5;
+//$primary: #3f51b5;
 $secondary: #2b2b2b;
 $accent: #9c27b0;
 
-$dark: #444444;
+$dark: #131419;
 $dark-page: #222222;
 
 $positive: #21ba45;
@@ -26,10 +27,10 @@ $warning: #f2c037;
 $white: #fff;
 
 //Custom Color Variables
-$light: rgba(255, 255, 255, 0.28);
 $darker: #222;
 $gray: #b5b6b7;
 $light: #cbd5e1;
+$lighter: #e0e5ec;
 $transparent: rgba(0, 0, 0, 0);
 
 //Custom Text Colors
@@ -42,5 +43,14 @@ $transparent: rgba(0, 0, 0, 0);
 .bg {
   &-darker {
     background-color: $darker;
+  }
+  &-light {
+    background-color: $light;
+  }
+  &-lighter {
+    background-color: $lighter;
+  }
+  &-gray {
+    background-color: $gray;
   }
 }

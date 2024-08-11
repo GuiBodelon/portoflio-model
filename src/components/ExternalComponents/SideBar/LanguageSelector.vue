@@ -1,7 +1,7 @@
 <template>
   <q-select v-model="selectedLocale" :options="localeOptions" :label="$t('components.shared.languageSelector.label')"
-    outlined emit-value :prefix="$t('components.shared.languageSelector.prefix')" map-options :label-color="labelColor"
-    @update:modelValue="updateLanguage">
+    outlined emit-value :prefix="$t('components.shared.languageSelector.prefix')" map-options
+    :label-color="$q.dark.isActive ? 'white' : 'dark'" @update:modelValue="updateLanguage">
     <template v-slot:option="scope">
       <q-item v-bind="scope.itemProps">
         <q-item-section avatar>

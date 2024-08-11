@@ -171,14 +171,17 @@ export default {
       // Página Sobre Mim
       aboutMe: {
         aboutMeText: {
-          title: 'Sobre <span style="color:#5050f5;">Mim</span>',
+          title: {
+            firstWord: 'Sobre',
+            secondWord: 'Mim',
+          },
           intro1:
-            'Desenvolvedor Web Fullstack e Web Designer, com mais de 5 anos de experiência, especializado em soluções de alta complexidade. Aplico rigorosas metodologias de desenvolvimento e práticas de Clean Code para otimizar processos.',
+            'Desenvolvedor de Web Full Stack e Designer de Web com mais de 5 anos de experiência. Eu desenvolvi soluções de alta complexidade, trabalho com rigorosas metodologias de desenvolvimento e práticas de Clean Code.',
           intro2:
-            'Minha jornada profissional evoluiu por meio de uma ampla gama de projetos, permitindo-me contribuir de forma adaptável e inovadora para o sucesso de cada empreendimento. Minha paixão por criar soluções eficazes continua a impulsionar meu aprimoramento constante e a busca por desafios tecnológicos cada vez mais complexos.',
+            'Uma carreira repleta de diversidade de projetos me permitiu contribuir de maneiras flexíveis e inovadoras para garantir o sucesso de cada tarefa em mãos. A paixão por desenvolver uma solução eficaz me motiva a cruzar constantemente os limites estabelecidos e embarcar em desafios tecnológicos cada vez mais emocionantes e desafiadores.',
           age: {
             title: 'Idade',
-            value: '25',
+            value: '26',
           },
           residence: {
             title: 'Residência',
@@ -194,22 +197,27 @@ export default {
           },
         },
         whatIDo: {
-          title: 'O que <span style="color:#5050f5;">Eu faço</span>',
+          title: {
+            firstWord: 'O que',
+            secondWord: 'Eu faço',
+          },
         },
-        marketingTitle:
-          'Publicidade & <span style="color:#5050f5;">Marketing</span>',
+        marketingTitle: {
+          firstWord: 'Publicidade &',
+          secondWord: 'Marketing',
+        },
         serviceCards: {
           systemsAndFeatures: {
             title: 'Sistemas & Funcionalidades',
-            text: 'Desenvolvemos aplicações web de alto desempenho, alinhadas com os objetivos e expectativas de seu negócio. Definimos o escopo do projeto, coletamos os requisitos necessários e criamos aplicativos personalizados para solucionar seus problemas e atender às suas metas. Sua visão é nossa criação.',
+            text: 'Nós entregamos aplicações web personalizadas poderosas que são projetadas com base nos requisitos e objetivos do seu negócio. Definimos o escopo do projeto, coletamos os requisitos e, em resposta a isso, desenvolvemos para você aplicações personalizadas que solucionam os seus problemas e atender os objetivos que você deseja alcançar.',
           },
           webDesign: {
             title: 'Web Design',
-            text: 'Na criação da identidade visual do site, priorizamos a estética e a funcionalidade do website, garantindo uma experiência de navegação otimizada e interativa, além de responsiva para os usuários.',
+            text: 'No design do site, e identidade visual somos rigidamente estéticos e práticos para proporcionar a melhor experiência de navegação, interação, responsividade e aprimoramento.',
           },
           landingPages: {
             title: 'Landing Pages',
-            text: 'Criamos páginas de conversão para atrair a atenção de seu público-alvo em relação a produtos específicos. Transformamos cliques e visitas em um funil de vendas estratégico, direcionando-os para a conclusão da compra.',
+            text: 'Nós desenhamos landing pages para chamar a atenção do seu público-alvo em torno de produtos específicos. Orientamos cliques e visitas através de um funil de vendas bem calculado até a finalização da venda.',
           },
           virtualStores: {
             title: 'Lojas virtuais',
@@ -241,6 +249,85 @@ export default {
             title: 'Plataformas',
             text: 'Com a nossa análise conjunta, definiremos qual a melhor plataforma para atender o seu negócio, em nosso leque podemos apresentar o Google meu Negócio e o Facebook Business!',
           },
+        },
+      },
+      resume: {
+        title: 'Currículo',
+        experiences: 'Experiências',
+        education: 'Educação',
+        timeline: {
+          work: [
+            {
+              period: 'Out de 2022 - Presente',
+              period2: '2 anos',
+              company: 'Grupo Report',
+              title: 'Desenvolvedor Full Stack',
+              description:
+                'Estou envolvido em uma variedade de projetos e responsabilidades que abrangem tanto o desenvolvimento de funcionalidades de alta complexidade quanto a criação de soluções inovadoras. Minhas atividades diárias incluem:<br /><br /> <b>Transformação de Protótipos em Interfaces</b>:<br /> - Transformo layouts criados no Adobe XD e Figma em interfaces interativas e responsivas utilizando HTML, SCSS, Bootstrap, JavaScript e i18n.<br /><br /> <b>Desenvolvimento e Manutenção de Sistemas Internos</b>:<br /> - Desenvolvo e mantenho sistemas para departamentos internos com VueJS, Quasar Framework, TypeScript, Laravel, Docker e MySQL.<br /><br /> <b>Configuração de VPS e Manutenção de Sites Internos</b>:<br /> - Configuro e mantenho servidores VPS para hospedagem interna de sites, realizando migrações e otimizações de desempenho e segurança.',
+            },
+            {
+              period: 'Junho de 2021 - Presente',
+              period2: '3 anos e 2 meses',
+              company: 'BE(e) Online Publicidade',
+              title: 'Desenvolvedor Web - Freelancer cooperativo',
+              description:
+                'Participo em uma série de projetos e responsabilidades que incluem desenvolvimento web e criação de soluções personalizadas:<br /><br /> <b>Desenvolvimento Web com WordPress</b>:<br /> - Criação de websites institucionais, landing pages, E-Commerces e blogs utilizando WordPress.<br /><br /> <b>Criação de Aplicações Web Personalizadas</b>:<br /> - Desenvolvimento de aplicações web personalizadas utilizando diversas stacks tecnológicas, incluindo Laravel, Lumen, VueJS, React, TypeScript, Oracle e MySQL.<br /><br /> <b>Prospecção e Gestão de Projetos Autônomos</b>:<br /> - Participação em reuniões, prospecção de clientes e configuração de gestão autônomos.',
+            },
+            {
+              period: 'Ago de 2022 - Out de 2022',
+              period2: '3 meses',
+              company: 'ConsCiência Soluções e Tecnologia',
+              title: 'Desenvolvedor Front-End Pleno',
+              description:
+                'Durante meu tempo na ConsCiência Soluções e Tecnologia, trabalhei no desenvolvimento de uma plataformas de venda de ingressos de cinema:<br /><br /> <b>Desenvolvimento de Plataforma de Venda de Ingressos</b>:<br /> - Utilizei VueJS, TypeScript, GraphQL, SCSS, K6, Azure DevOps e Docker para desenvolver a plataforma em formatos SSR e SSG.',
+            },
+            {
+              period: 'Out de 2020 - Ago de 2022',
+              period2: '1 ano e 10 meses',
+              company: 'S.P.A. Saúde - Sistema de Promoção Assistencial',
+              title: 'Desenvolvedor FullStack Junior',
+              description:
+                'Como assistente de TI, estive envolvido em várias atividades técnicas e administrativas:<br /><br /> <b>Modelagem de Dados e Desenvolvimento de APIs</b>:<br /> - Modelagem de dados, desenvolvimento de APIs Rest e migração de sistemas legados.<br /><br /> <b>Manutenção e Suporte Técnico</b>:<br /> - Manutenção de servidores em nuvem AWS, gerenciamento de serviços via Cloudflare, soluções de backup, administração de webmail, configuração de antivírus e manutenção de máquinas.',
+            },
+            {
+              period: 'Maio de 2018 - Fev de 2019',
+              period2: '10 meses',
+              company: 'AFIP - Associação Fundo de Incentivo à Pesquisa',
+              title: 'Auxiliar ADM/T.I',
+              description:
+                'Durante meu tempo na AFIP, trabalhei principalmente no gerenciamento de acessos a sistemas e suporte técnico:<br /><br /> <b>Gerenciamento de Acessos e Suporte Técnico</b>:<br /> - Gerenciamento de acessos a sistemas, auxílio em análise de sistemas e suporte técnico nível 1.<br /><br /> <b>Lançamentos Contábeis</b>:<br /> - Realização de lançamentos contábeis no ERP Protheus.<br /><br /> <b>Criação de Manuais</b>:<br /> - Criação e edição de manuais de sistemas internos para uso de usuários.',
+            },
+          ],
+          education: [
+            {
+              period: '2017 - o momento - 6 anos',
+              company: 'Cursos',
+              title: 'Diversos Cursos Pagos e Gratuitos',
+              description:
+                'Desde o ano de 2017 até o presente momento, tenho dedicado meu tempo e energia a uma busca constante por aprendizado e aprimoramento em áreas específicas de atuação. Minha trajetória inclui a participação em uma ampla gama de cursos, tanto pagos quanto gratuitos, disponíveis na internet. Essa iniciativa reflete meu compromisso contínuo em adquirir conhecimento, acompanhar as tendências emergentes e aprofundar minha expertise em áreas de interesse. Através dessas experiências educacionais, tenho adquirido as habilidades e os insights necessários para enfrentar desafios e contribuir de forma significativa em meu campo de atuação.',
+            },
+            {
+              period: '2018',
+              company: 'USJT - Universidade São Judas Tadeu',
+              title: 'Sistemas de Informação',
+              description:
+                'Estudo de como as informações e os dados são recebidos, manipulados e devolvidos através dos computadores e dos softwares. Aprendendo a criar e gerenciar programas e softwares, bem como modificá-los usando linguagens de programação, bibliotecas, frameworks e bancos de dados.',
+            },
+            {
+              period: '2017',
+              company: 'B7Web',
+              title: 'Curso Fullstack',
+              description:
+                'O curso fullstack da B7Web fornece aulas que ensinam todas as 3 principais áreas da programação. Essas áreas são Front-end, Back-end e mobile, desta forma você será capaz de criar todas as etapas de um sistema, aplicativo, sites, etc.',
+            },
+            {
+              period: '2015',
+              company: 'Microlins',
+              title: 'Curso Profissional Web Designer',
+              description:
+                'O Curso Profissional Web Designer é o responsável por criar e desenvolver websites, interfaces para sistemas web e páginas na internet de todo tipo, desde redes sociais e páginas de empresas até lojas virtuais.',
+            },
+          ],
         },
       },
     },

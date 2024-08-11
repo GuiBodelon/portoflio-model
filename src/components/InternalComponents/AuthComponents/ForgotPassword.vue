@@ -25,7 +25,7 @@
 
     <div v-if="linkEnviado">
       <div class="text-h5 text-uppercase text-weight-bold">{{
-        $t('components.internal.auth.forgotPassword.onSuccess.title') }}</div>
+    $t('components.internal.auth.forgotPassword.onSuccess.title') }}</div>
       <div class="text-body1 q-my-md">
         <p v-html="$t('components.internal.auth.forgotPassword.onSuccess.instructions', { email })"></p>
       </div>
@@ -38,17 +38,17 @@
 
     <div v-if="operationError">
       <div class="text-h5 text-uppercase text-weight-bold">{{
-        $t('components.internal.auth.forgotPassword.onError.title') }}</div>
+    $t('components.internal.auth.forgotPassword.onError.title') }}</div>
 
       <div class="bg-dark text-white q-pa-md q-my-lg rounded-borders">
         <div class="row justify-center items-center">
           <q-icon name="do_not_disturb_on" color="negative" size="lg" class="col-2" />
           <div class="col-10">
             <span class="text-weight-bold">{{ $t('components.internal.auth.forgotPassword.onError.errorMessage', {
-              email
-            }) }}</span><br />
+    email
+  }) }}</span><br />
             <span class="text-light text-weight-medium">{{
-              $t('components.internal.auth.forgotPassword.onError.suggestion') }}</span>
+    $t('components.internal.auth.forgotPassword.onError.suggestion') }}</span>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import ButtonAuth, { ButtonAuthProps } from '../ButtonAuth.vue';
-import { requestPasswordReset, resetPassword } from 'src/services/AuthServices/forgot-password-service';
+import { requestPasswordReset } from 'src/services/AuthServices/forgot-password-service';
 
 const { t } = useI18n({ useScope: 'global' });
 
@@ -117,4 +117,3 @@ const resetOperation = () => {
   forgotPasswordKey.value++;
 };
 </script>
-

@@ -22,8 +22,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import LanguageSelector from 'src/components/shared/LanguageSelector.vue';
-import ButtonSwitchLight from 'src/components/shared/ButtonSwitchLight.vue';
+import LanguageSelector from 'src/components/ExternalComponents/SideBar/LanguageSelector.vue';
+import ButtonSwitchLight from 'src/components/ExternalComponents/SideBar/ButtonSwitchLight.vue';
 
 const route = useRoute()
 const routeName = ref(route.name)

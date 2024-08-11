@@ -48,8 +48,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
-import LanguageSelector from 'src/components/shared/LanguageSelector.vue';
-import ButtonSwitchLight from 'src/components/shared/ButtonSwitchLight.vue';
+import LanguageSelector from 'src/components/ExternalComponents/SideBar/LanguageSelector.vue';
+import ButtonSwitchLight from 'src/components/ExternalComponents/SideBar/ButtonSwitchLight.vue';
 import LogoutButton from 'src/components/InternalComponents/AuthComponents/LogoutButton.vue';
 
 const route = useRoute();

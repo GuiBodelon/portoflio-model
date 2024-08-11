@@ -2,9 +2,9 @@
   <q-page class="q-pa-xl">
     <div class="row justify-start items-start">
       <div class="col-12">
-        <div class="page-title">
-          <div class="text-h4 text-weight-bold" v-html="$t('pages.external.aboutMe.aboutMeText.title')"></div>
-        </div>
+        <PageTitle class="text-h4 text-weight-bold"
+          :firstWord="$t('pages.external.aboutMe.aboutMeText.title.firstWord')"
+          :secondWord="$t('pages.external.aboutMe.aboutMeText.title.secondWord')" />
       </div>
     </div>
 
@@ -18,24 +18,32 @@
         <ul class="q-gutter-y-md text-mulish text-body2 q-pa-none">
           <li class="q-gutter-x-sm">
             <span class="text-primary text-weight-bold">{{ $t('pages.external.aboutMe.aboutMeText.age.title') }}</span>
-            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">{{
-              $t('pages.external.aboutMe.aboutMeText.age.value') }}</span>
+            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">
+              {{ $t('pages.external.aboutMe.aboutMeText.age.value') }}
+            </span>
           </li>
           <li class="q-gutter-x-sm">
-            <span class="text-primary text-weight-bold">{{ $t('pages.external.aboutMe.aboutMeText.residence.title')
-            }}</span>
-            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">{{
-              $t('pages.external.aboutMe.aboutMeText.residence.value') }}</span>
+            <span class="text-primary text-weight-bold">
+              {{ $t('pages.external.aboutMe.aboutMeText.residence.title') }}
+            </span>
+            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">
+              {{ $t('pages.external.aboutMe.aboutMeText.residence.value') }}
+            </span>
           </li>
           <li class="q-gutter-x-sm">
-            <span class="text-primary text-weight-bold">{{ $t('pages.external.aboutMe.aboutMeText.email.title') }}</span>
-            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">{{
-              $t('pages.external.aboutMe.aboutMeText.email.value') }}</span>
+            <span class="text-primary text-weight-bold">
+              {{ $t('pages.external.aboutMe.aboutMeText.email.title') }}
+            </span>
+            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">
+              {{ $t('pages.external.aboutMe.aboutMeText.email.value') }}
+            </span>
           </li>
           <li class="q-gutter-x-sm">
-            <span class="text-primary text-weight-bold">{{ $t('pages.external.aboutMe.aboutMeText.phone.title') }}</span>
-            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">{{
-              $t('pages.external.aboutMe.aboutMeText.phone.value') }}</span>
+            <span class="text-primary text-weight-bold">{{ $t('pages.external.aboutMe.aboutMeText.phone.title')
+              }}</span>
+            <span :class="$q.dark.isActive ? 'text-light' : 'text-dark'">
+              {{ $t('pages.external.aboutMe.aboutMeText.phone.value') }}
+            </span>
           </li>
         </ul>
       </div>
@@ -43,18 +51,17 @@
 
     <div class="row q-mt-lg q-col-gutter-md" :class="$q.dark.isActive ? 'text-light' : 'text-dark'">
       <div class="col-12">
-        <div class="page-subtitle" :class="$q.dark.isActive ? 'text-white' : 'text-dark'">
-          <div class="text-h6 text-weight-bold" v-html="$t('pages.external.aboutMe.whatIDo.title')"></div>
-        </div>
+        <PageTitle class="text-h6 text-weight-bold" :firstWord="$t('pages.external.aboutMe.whatIDo.title.firstWord')"
+          :secondWord="$t('pages.external.aboutMe.whatIDo.title.secondWord')" />
       </div>
       <div v-for="service in serviceCard" :key="service.title" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <ServiceCard :icon="service.icon" :title="service.title" :text="service.text" />
       </div>
       <div class="col-12">
         <q-separator spaced :dark="$q.dark.isActive" :color="$q.dark.isActive ? '' : 'grey-5'" />
-        <div class="page-subtitle q-mt-xl" :class="$q.dark.isActive ? 'text-white' : 'text-dark'">
-          <div class="text-h6 text-weight-bold" v-html="$t('pages.external.aboutMe.marketingTitle')"></div>
-        </div>
+        <PageTitle class="text-h6 text-weight-bold q-mt-xl"
+          :firstWord="$t('pages.external.aboutMe.marketingTitle.firstWord')"
+          :secondWord="$t('pages.external.aboutMe.marketingTitle.secondWord')" />
       </div>
       <div v-for="service in serviceCardMarketing" :key="service.title" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <ServiceCard :icon="service.icon" :title="service.title" :text="service.text" />
@@ -69,6 +76,7 @@
 import { useI18n } from 'vue-i18n'
 import { watch } from 'vue';
 import ServiceCard, { ServiceCardProps } from 'src/components/ExternalComponents/ServiceCard.vue';
+import PageTitle from 'components/ExternalComponents/shared/PageTitle.vue'
 
 const { t, locale } = useI18n({ useScope: 'global' })
 
